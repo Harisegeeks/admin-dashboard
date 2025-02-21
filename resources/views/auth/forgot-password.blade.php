@@ -27,7 +27,6 @@
     <link href="{{ asset('assets/css/lib/helper.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
-
 <body class="bg-primary">
 
     <div class="unix-login">
