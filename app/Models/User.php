@@ -9,7 +9,6 @@ use Spatie\Permission\Models\Permission;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Models\User;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */

@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <!--*******************
         Preloader start
     ********************-->
@@ -55,68 +54,54 @@
         <!--**********************************
             Content body start
         ***********************************-->
-        @yield('content')
+        <x-app-layout>
+            <x-slot name="header">
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                    {{ __('Admin Dashboard') }}
+                </h2>
+            </x-slot>
+
+            <div class="py-12">
+                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                        <div class="p-6 text-gray-900">
+                            <!-- Your admin dashboard specific content goes here -->
+                            <div id="main-wrapper">
+                                <!--**********************************
+                                    Nav header start
+                                ***********************************-->
+                                @include('header')
+                                <!--**********************************
+                                    Header end ti-comment-alt
+                                ***********************************-->
+
+                                <!--**********************************
+                                    Sidebar start
+                                ***********************************-->
+                                @include('sidebar')
+                                <!--**********************************
+                                    Sidebar end
+                                ***********************************-->
+                                    @include('maincontent')
+                                <!--**********************************
+                                    Footer start
+                                ***********************************-->
+                                @include('footer')
+                                <!--**********************************
+                                    Footer end
+                                ***********************************-->
+                            </div>
+
+                            <!-- Include your scripts -->
+                            <script src="{{ asset('vendor/global/global.min.js') }}"></script>
+                            <script src="./js/quixnav-init.js"></script>
+                            <script src="./js/custom.min.js"></script>
+                            <!-- ... other scripts ... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </x-app-layout>
         <!--**********************************
             Content body end
         ***********************************-->
-
-
-        <!--**********************************
-            Footer start
-        ***********************************-->
-        @include('footer')
-        <!--**********************************
-            Footer end
-        ***********************************-->
-
-        <!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-        <!--**********************************
-           Support ticket button end
-        ***********************************-->
-
-
-    </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
-    <!-- Required vendors -->
-    <script src="./vendor/global/global.min.js"></script>
-    <script src="./js/quixnav-init.js"></script>
-    <script src="./js/custom.min.js"></script>
-
-
-    <!-- Vectormap -->
-    <script src="./vendor/raphael/raphael.min.js"></script>
-    <script src="./vendor/morris/morris.min.js"></script>
-
-
-    <script src="./vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="./vendor/chart.js/Chart.bundle.min.js"></script>
-
-    <script src="./vendor/gaugeJS/dist/gauge.min.js"></script>
-
-    <!--  flot-chart js -->
-    <script src="./vendor/flot/jquery.flot.js"></script>
-    <script src="./vendor/flot/jquery.flot.resize.js"></script>
-
-    <!-- Owl Carousel -->
-    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
-
-    <!-- Counter Up -->
-    <script src="./vendor/jqvmap/js/jquery.vmap.min.js"></script>
-    <script src="./vendor/jqvmap/js/jquery.vmap.usa.js"></script>
-    <script src="./vendor/jquery.counterup/jquery.counterup.min.js"></script>
-
-
-    <script src="./js/dashboard/dashboard-1.js"></script>
-
-</body>
-
-</html>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {return view('welcome');});
 Route::get('/admin', function () {return view('admin');})->middleware(['auth', 'verified'])->name('admin');
@@ -20,4 +21,7 @@ Route::get('header', function () {return view('header');});
 Route::get('footer', function () {return view('footer');});
 Route::get('sidebar', function () {return view('sidebar');});
 Route::get('maincontent', function () {return view('maincontent');});
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+});
 require __DIR__.'/auth.php';

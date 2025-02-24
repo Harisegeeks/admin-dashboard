@@ -21,42 +21,42 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./index.html">Dashboard 1</a></li>
-                            <li><a href="./index2.html">Dashboard 2</a></li>
+                            {{-- <li><a href="{{route('index')}}">Dashboard 1</a></li> --}}
+                            {{-- <li><a href="{{route('index2')}}">Dashboard 2</a></li> --}}
                         </ul>
                     </li>
                     <li class="nav-label">Apps</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text">Apps</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./app-profile.html">Profile</a></li>
+                            <li><a href="{{route('profile')}}">Profile</a></li>
                             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
                                 <ul aria-expanded="false">
-                                    <li><a href="./email-compose.html">Compose</a></li>
-                                    <li><a href="./email-inbox.html">Inbox</a></li>
-                                    <li><a href="./email-read.html">Read</a></li>
+                                    <li><a href="{{route('composeemial')}}">Compose</a></li>
+                                    <li><a href="{{route('emialinbox')}}">Inbox</a></li>
+                                    <li><a href="{{route('reademail')}}">Read</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./app-calender.html">Calendar</a></li>
+                            <li><a href="{{route('calender')}}">Calendar</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-chart-bar-33"></i><span class="nav-text">Charts</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./chart-flot.html">Flot</a></li>
-                            <li><a href="./chart-morris.html">Morris</a></li>
-                            <li><a href="./chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="./chart-chartist.html">Chartist</a></li>
-                            <li><a href="./chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="./chart-peity.html">Peity</a></li>
+                            <li><a href="{{route('charts/flot')}}">Flot</a></li>
+                            <li><a href="{{route('charts/morris')}}">Morris</a></li>
+                            <li><a href="{{route('charts/chartsjs')}}">Chartjs</a></li>
+                            <li><a href="{{route('charts/chartlist')}}">Chartist</a></li>
+                            <li><a href="{{route('charts/Sparkline')}}">Sparkline</a></li>
+                            <li><a href="{{route('charts/Peity')}}">Peity</a></li>
                         </ul>
                     </li>
                     <li class="nav-label">Components</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-world-2"></i><span class="nav-text">Bootstrap</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">Accordion</a></li>
-                            <li><a href="./ui-alert.html">Alert</a></li>
+                            <li><a href="route{{route('Bootstrap/accordain')}}">Accordion</a></li>
+                            <li><a href="{{route('bootsrap/alert')}}">Alert</a></li>
                             <li><a href="./ui-badge.html">Badge</a></li>
                             <li><a href="./ui-button.html">Button</a></li>
                             <li><a href="./ui-modal.html">Modal</a></li>

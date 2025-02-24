@@ -19,6 +19,6 @@ class DatabaseSeeder extends Seeder
         PermissionSeeder::class,
         UserSeeder::class,
     ]);
-       // $user = User::where('email', 'admin@example.com')->first();
+       $user = User::where('email', 'admin@example.com')->first();
     }
 }

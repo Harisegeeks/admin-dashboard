@@ -14,13 +14,12 @@ class LoginController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function authenticated(Request $request, $user)
+    protected function authenticated(Request $request, $user)
     {
-      $user = Auth::user();
-        if($user->hasRole('admin')){
-            return redirect()->route('admin');
-        } 
-            return redirect()->route('user-dashboard');
-        
+        if ($user->is_admin) {
+            return redirect()->route('admin.dashboard');
+        }
+
+        return redirect()->intended($this->redirectPath());
     }
 }
